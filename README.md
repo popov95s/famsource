@@ -29,4 +29,4 @@ To set up DB Admin Tool:
 passwd= DB_PASS
 
 3. Serve app
-python database_utility/admin.py
+<code>python database_utility/admin.py</code>
