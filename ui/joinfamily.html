@@ -1,37 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
   <title>Starter Template - Materialize</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
+
 <body class="grey lighten-5">
-  <nav class="grey darken-4" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><span class="red-text text-lighten-1 fam">fam</span>source</a>
-      <ul class="right hide-on-med-and-down">
-          <li><a href="#">Sign Up</a></li>
-          <li><a href="#">Sign In</a></li>
-        </ul>
-        <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Sign In</a></li>
-          </ul>
-          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  <nav role="navigation">
+    <div class="nav-wrapper container-wide">
+      <a id="logo-container-wide" href="#" class="brand-logo">
+        <span class="red-text text-lighten-1 fam">fam</span>source</a>
     </div>
   </nav>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br/><br/>            
+  <div class="banner">
+    <div class="container-wide">
+      <div class="row" style="margin-bottom:0">
+        <div class="col s12 m4 l3">
+          <h4>Join A Family</h4>
+        </div>
+        <div class="col s12 m8 l9">
+          <div class="input-field col s6">
+            <input placeholder="Search" id="search" type="text" class="validate">
+            <a class="waves-effect waves-light btn">Go</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-wide" style="padding:0">
+    <div class="row">
+      <div class="col s12 m4 l3 filter">
+        <p>Filters</p>
+        <form action="#">
+          <p>
+            <input type="checkbox" id="test5" />
+            <label for="test5">Red</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test6" checked="checked" />
+            <label for="test6">Yellow</label>
+          </p>
+          <p>
+            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+            <label for="filled-in-box">Filled in</label>
+          </p>
+          <p>
+            <input type="checkbox" id="indeterminate-checkbox" />
+            <label for="indeterminate-checkbox">Indeterminate Style</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+            <label for="test7">Green</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test8" disabled="disabled" />
+            <label for="test8">Brown</label>
+          </p>
+        </form>
+      </div>
+      <div class="col s12 m8 l9">
+        <div class="input-field col s6">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/6">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <footer class="">
-  
+
   </footer>
 
 
@@ -40,5 +96,6 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
 
-  </body>
+</body>
+
 </html>
