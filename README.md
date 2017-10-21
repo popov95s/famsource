@@ -18,7 +18,7 @@ On Unix :
 On Windows: 
 <code>SET FLASK_APP=app.py</code>
 5. Serve app
-flask run --port=5001 --host=0.0.0.0
+<code>flask run --port=5001 --host=0.0.0.0</code>
 
 
 To set up DB Admin Tool: 
