@@ -12,3 +12,9 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+.card-action-right{
+  float: right;
+}
+.fam{
+  font-weight: 500;
+}
