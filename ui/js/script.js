@@ -4,3 +4,8 @@ var options = [
     } }
   ];
   Materialize.scrollFire(options);
+
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+           
