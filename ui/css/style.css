@@ -129,3 +129,6 @@ i.star{
 .alert-close{
   display: initial;
 }
+.filter-bar{
+  height: 300px;
+}
