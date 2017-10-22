@@ -23,7 +23,6 @@ def index():
 	return '<a href="/admin/">Click me to get to Admin!</a>'
 
 
-
 # Create models
 class User(db.Model):
 	__tablename__ = 'users'
@@ -57,6 +56,9 @@ class Service(db.Model):
 	__tablename__ = 'services'
 	service_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
 	service_name = db.Column(db.String(32))
+	service_max_capacity = db.Column(db.Integer)
+	service_min_capacity = db.Column(db.Integer)
+
 	def __unicode__(self):
 		return self.service_name
 
@@ -68,9 +70,21 @@ class ServiceToPlan(db.Model):
 	def __unicode__(self):
 		return (str(self.service_to_plan_plan_id) + " " + str(self.service_to_plan_service_id))
 
+class UserReviews(db.Model):
+	__tablename__ = 'user_reviews'
+	review_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+	user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+	review_string = db.Column(db.String(512))
+	review_value = db.Column(db.Integer)
+	reviewed_by_user = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+
+	# Required for administrative interface. For python 3 please use __str__ instead.
+	def __unicode__(self):
+		return self.review_id
+
 class ServiceAdmin(sqla.ModelView):
 	column_display_pk = True
-	form_columns = ['service_id', 'service_name']
+	form_columns = ['service_id', 'service_name', 'service_max_capacity','service_min_capacity']
 
 class ServiceToPlanAdmin(sqla.ModelView):
    	column_display_pk = True
@@ -89,6 +103,11 @@ class UserToPlanAdmin(sqla.ModelView):
 	column_display_pk = True
 	form_columns = ['user_to_plan_id', 'user_to_plan_user_id', 'user_to_plan_plan_id']
 
+class UserReviewsAdmin(sqla.ModelView):
+	column_display_pk = True
+	form_columns = ['review_id','user_id','review_string','review_value','reviewed_by_user']
+
+
 # Create admin
 admin = admin.Admin(app, name='FamSource admin tool')
 admin.add_view(UserAdmin(User, db.session))
@@ -96,8 +115,10 @@ admin.add_view(PlanAdmin(Plan, db.session))
 admin.add_view(UserToPlanAdmin(UserToPlan, db.session))
 admin.add_view(ServiceAdmin(Service, db.session))
 admin.add_view(ServiceToPlanAdmin(ServiceToPlan, db.session))
+admin.add_view(UserReviewsAdmin(UserReviews, db.session))
 if __name__ == '__main__':
 
+	#db.drop_all()
 	# Create DB
 	db.create_all()
 

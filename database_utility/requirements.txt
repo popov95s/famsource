@@ -1,0 +1,14 @@
+click==6.7
+enum34==1.1.6
+Flask==0.12.2
+Flask-Admin==1.5.0
+Flask-SQLAlchemy==2.3.2
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+psycopg2==2.7.3.1
+PyMySQL==0.7.11
+SQLAlchemy==1.1.14
+sqlalchemy-redshift==0.7.0
+Werkzeug==0.12.2
+WTForms==2.1
