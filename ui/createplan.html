@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Create</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body class="grey lighten-5">
+    <nav role="navigation">
+        <div class="nav-wrapper container-wide">
+            <a id="logo-container-wide" href="index.html" class="brand-logo">
+                <span class="red-text text-lighten-1 fam">f</span>s</a>
+        </div>
+    </nav>
+    <div class="banner">
+        <div class="container-wide">
+            <div class="row" style="margin-bottom:0">
+                <div class="col s12 m4 l3">
+                    <h4>Create A Plan</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-wide" style="padding:0">
+        <div class="row">
+            <div class="col s12 m3 infocard">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title pink-text text-accent-2">Phone Services</span>
+                        <ul class="services">
+                            <li>T-Mobile
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3" onclick="addService('T-Mobile', 24.99)">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                            <li>Verizon
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3" onclick="addService('Verizon', 29.99)">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3 infocard">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title purple-text text-darken-4">Video Services</span>
+                        <ul class="services">
+                            <li>Netflix
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3" onclick="addService('Netflix', 14.99)">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                            <li>Hulu
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3" onclick="addService('Hulu', 12.99)">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3 infocard">
+                <div class="card ">
+                    <div class="card-content ">
+                        <span class="card-title light-green-text text-accent-4">Music Services</span>
+                        <ul class="services">
+                            <li>Spotify
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3" onclick="addService('Spotify',9.99)">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                            <li>Google Play
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3" onclick="addService('Google Play', 5.99)">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                            <li>Apple Music
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3" onclick="addService('Apple Music', 4.99)">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row tablePlan">
+            <table class="striped" id="serviceTable">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Duration</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="row right submitTable">
+            <a class="waves-effect waves-teal btn-flat modal-trigger" href="#modal1">Add friends</a>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Create Plan
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Add Friends</h4>
+            <input placeholder="Enter Friend's Email" id="duration" type="email" class="validate">
+            <input placeholder="Enter Friend's Email" id="duration" type="email" class="validate">
+            <input placeholder="Enter Friend's Email" id="duration" type="email" class="validate">
+        </div>
+        <div class="modal-footer">
+            <button class="btn waves-effect waves-light" type="submit" name="action" href="#">Create Plan
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
+
+
+    <footer class="">
+
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/script.js"> </script>
+    <script>
+        var total = 0.0;
+        function addService(service,price){
+            var table = document.getElementById('serviceTable');
+            var row = table.insertRow(1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            cell1.innerHTML = service;
+            cell2.innerHTML = '<div class="col s3"> ' + 
+                            '<input placeholder="# of months" id="duration" type="number" class="validate" value=1 onclick="updateSum(this,' +price.toString()+')"> \
+                            </div>\
+                            <div class="input-field col s4"> \
+                                <select>\
+                                    <option value="" disabled selected>Choose your option</option>\
+                                    <option value="1">Years</option>\
+                                    <option value="2">Option 2</option> \
+                                    <option value="3">Option 3</option>\
+                                </select>\
+                            </div>';
+            cell3.innerHTML = "<div id='total_price"+price.toString()+"'>"+price.toString()+"</div>";
+        }
+        function updateSum(amount, price){
+            var cell = this.document.getElementById('total_price'+price);
+            cell.innerHTML= (amount.value*parseFloat(price)).toString();
+        }
+
+    </script>
+</body>
+
+</html>

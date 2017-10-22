@@ -16,5 +16,116 @@
   float: right;
 }
 .fam{
+  font-weight: 600;
+}
+.famsource{
+  font-size: 30px !important;
+}
+nav ul li .nav-sign-up {
+  z-index: 0;
+  margin-left: 15px;
+  padding: 0 15px;
+  line-height: 33px;
+  letter-spacing: .5px;
   font-weight: 500;
+  background-color: white;
+  border: 2px solid white;
+  color: #F62D51;
+  border-radius: 90px;
+  text-transform: none;
+}
+.nav-sign-up:hover{
+  background-color: black;
+}
+
+.container-wide{
+  padding: 0 2em;
+}
+nav{
+  background:none;
+  border:none;
+  box-shadow:none;
+  position: absolute;
+}
+.banner{
+  color: #fafafa;
+  padding-top: 150px;
+  background: linear-gradient(to right, #c21500, #ffc500);
+  width: 100%;
+}
+.brand-logo{
+  color: black;
+}
+.plans{
+  width:89%;
+  padding: 10px;
+  margin: 50px 25px;
+}
+.filtersForm{
+  padding:20px !important;
+}
+.progress{
+  margin: 25px 0 0 0;
+  height: 5px;
+  width:70%;
+}
+.status{
+  padding: 0 !important;
+  margin-top: -35px;
+  width:auto !important;
+}
+.status > div{
+  padding: 20px;
+  border: 5px solid #eeeeee; 
+}
+.products{
+  padding: 0px 15px !important;
+}
+#logo-container-wide{
+  margin-top: 10px;
+  border-radius: 10px;
+  background: black;
+  padding: 0px 13px;
+  font-size: 45px;
+}
+.row{
+  margin-bottom: 0;
+}
+.infocard{
+  margin-left: 90px !important;
+  margin-top: 20px;
+}
+.services > li{
+  margin-bottom: 40px;
+}
+.services > li:last-child{
+  margin-bottom: 0;
+}
+.addBtn{
+  padding: 0 !important;
+  box-shadow: none !important;
+  background-color: transparent;
+}
+.addBtn:hover{
+  background-color: #eeeeee;
+}
+.tablePlan{
+  padding: 45px;
+}
+.duration{
+  margin-top: 0;
+}
+.submitTable{
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.profile{
+  margin-top: 20px;
+  padding: 5px;
+}
+i.star{
+  color:#ffc400;
+}
+.alert-close{
+  display: initial;
 }
