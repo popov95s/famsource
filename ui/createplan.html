@@ -102,6 +102,7 @@
                         <th>Service</th>
                         <th>Duration</th>
                         <th>Amount</th>
+                        <th></th>
                     </tr>
                 </thead>
 
@@ -163,10 +164,16 @@
                                 </select>\
                             </div>';
             cell3.innerHTML = "<div id='total_price"+price.toString()+"'>"+price.toString()+"</div>";
+            var cell4 = row.insertCell(3);
+            cell4.innerHTML= '<i class="material-icons waves-effect waves-light" onclick="removeRow(this)">clear</i>';
         }
         function updateSum(amount, price){
             var cell = this.document.getElementById('total_price'+price);
             cell.innerHTML= (amount.value*parseFloat(price)).toString();
+        }
+        function removeRow(row){
+            var i = row.parentNode.parentNode.rowIndex;
+            document.getElementById("serviceTable").deleteRow(i);
         }
 
     </script>
