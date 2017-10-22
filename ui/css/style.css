@@ -53,3 +53,37 @@ nav{
 .brand-logo{
   color: black;
 }
+.plans{
+  width:89%;
+  padding: 10px;
+  margin: 50px 25px;
+}
+.filtersForm{
+  padding:20px !important;
+}
+.progress{
+  margin: 25px 0 0 0;
+  height: 5px;
+  width:70%;
+}
+.status{
+  padding: 0 !important;
+  margin-top: -23px;
+  width:auto !important;
+}
+.status > div{
+  padding: 25px;
+  border: 5px solid #eeeeee; 
+}
+.card-content{
+  padding: 0px 15px !important;
+}
+#logo-container-wide{
+  margin-top: 10px;
+  border-radius: 28px;
+  background: black;
+  padding: 0px 28px;
+}
+.row{
+  margin-bottom: 0;
+}
