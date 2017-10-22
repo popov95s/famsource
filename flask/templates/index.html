@@ -7,8 +7,8 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="{{ url_for('static', filename='css/materialize.css' }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="{{ url_for('static', filename='css/style.css' }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body class="blue lighten-5">
   <nav class="grey darken-4" role="navigation">
@@ -22,7 +22,7 @@
         <div class="col s6 offset-s3">
           <div class="card">
             <div class="card-image">
-              <img src="images/header.jpg">
+              <img src="{{ url_for('static', filename='images/header.jpg') }}">
               <span class="card-title">Plans</span>
             </div>
             <div class="card-content">
@@ -46,8 +46,8 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="{{ url_for('static', filename='js/materialize.js' }}"></script>
-  <script src="{{ url_for('static', filename='js/init.js' }}"></script>
+  <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/init.js') }}"></script>
 
   </body>
 </html>
