@@ -2,183 +2,199 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>Join</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Join</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link rel="shortcut icon" href="favicon.ico"/> 
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="shortcut icon" href="favicon.ico" />
 </head>
 
 <body class="grey lighten-5">
-  <nav role="navigation">
-    <div class="nav-wrapper container-wide">
-      <a id="logo-container-wide" href="index.html" class="brand-logo">
-        <span class="red-text text-lighten-1 fam">f</span>s</a>
-    </div>
-  </nav>
-  <div class="banner">
-    <div class="container-wide">
-      <div class="row" style="margin-bottom:0">
-        <div class="col s12 m4 l3">
-          <h4>Join A Plan</h4>
+    <nav role="navigation">
+        <div class="nav-wrapper container-wide">
+            <a id="logo-container-wide" href="index.html" class="brand-logo">
+                <span class="red-text text-lighten-1 fam">f</span>s</a>
         </div>
-        <div class="col s12 m8 l9">
-          <div class="input-field col s6">
-            <input placeholder="Search" id="search" type="text" class="validate">
-          </div>
-          <a class="btn" style="background:none;box-shadow:none;margin-top:25px;">
-            <i class="material-icons">search</i>
-          </a>
+    </nav>
+    <div class="banner">
+        <div class="container-wide">
+            <div class="row" style="margin-bottom:0">
+                <div class="col s12 m4 l3">
+                    <h4>Join A Plan</h4>
+                </div>
+                <div class="col s12 m8 l9">
+                    <div class="input-field col s6">
+                        <input placeholder="Search" id="search" type="text" class="validate">
+                    </div>
+                    <a class="btn" style="background:none;box-shadow:none;margin-top:25px;">
+                        <i class="material-icons">search</i>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-      <a class="btn-floating btn-large waves-effect waves-light tooltipped" data-position="top" data-delay="50" data-tooltip="Create A Plan" href="createplan.html">
-        <i class="material-icons">add</i>
-      </a>
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large waves-effect waves-light tooltipped" data-position="top" data-delay="50" data-tooltip="Create A Plan"
+            href="createplan.html">
+            <i class="material-icons">add</i>
+        </a>
     </div>
-  <div class="container-wide" style="padding:0">
-    <div class="row">
-      <div class="col s12 m4 l3 filter grey lighten-2 filtersForm">
-        <h5>Filters</h5>
-        <form action="#">
-          <p>Plans</p>
-          <p>
-            <input type="checkbox" id="phone" />
-            <label for="phone">Phone</label>
-          </p>
-          <p>
-            <input type="checkbox" id="music" />
-            <label for="music">Music</label>
-          </p>
-          <p>
-            <input type="checkbox" id="video" />
-            <label for="video">Video</label>
-          </p>
-          <br/>
-          <div class="features-divider">
-            <i class="material-icons">filter_list</i>
-          </div>
-          <p>Duration</p>
-          <p class="range-field">
-              <input type="range" id="timeFilter" min="0" max="12" />
-            </p>
-            <div class="filter-bar"></div>
-        </form>
-      </div>
+    <div class="container-wide" style="padding:0">
+        <div class="row">
+            <div class="col s12 m4 l3 filter grey lighten-2 filtersForm">
+                <h5>Filters</h5>
+                <form action="#">
+                    <p>Plans</p>
+                    <p>
+                        <input type="checkbox" id="phone" />
+                        <label for="phone">Phone</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="music" />
+                        <label for="music">Music</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="video" />
+                        <label for="video">Video</label>
+                    </p>
+                    <br/>
+                    <div class="features-divider">
+                        <i class="material-icons">filter_list</i>
+                    </div>
+                    <p>Duration</p>
+                    <p class="range-field">
+                        <input type="range" id="timeFilter" min="0" max="12" />
+                    </p>
+                    <div class="filter-bar"></div>
+                </form>
+            </div>
 
-      <div class="col s12 m8 l9">
-        <ul id="staggered-list">
-          <li>
-                <div class="card horizontal plans">
-                        <div class="card-image">
-                          <a href="#"><img src="images/demo-img.png"
-                            style="width:100px;"></a>
-                        </div>
-                        <div class="card-stacked">
-                          <div class="card-content products">
-                            <span class="card-title grey-text text-darken-4">T-Mobile + Spotify + Netflix
-                                <a class="alert-close btn-flat"><i class="material-icons right">close</i></a>
-                            </span>
-                            <div class="col s6 progress grey lighten-3">
-                                <div class="determinate  light-green darken-3" style="width: 50%"></div>
-                              </div>
-                              <div class="col s3 status">
-                                <div class=" circle  light-green darken-3">
-                                  <p class="white-text" style="font-size:18pt;">2/4</p>
+            <div class="col s12 m8 l9">
+                <ul id="staggered-list">
+                    <li>
+                        <div class="card horizontal plans">
+                            <div class="card-image">
+                                <a href="#">
+                                    <img src="images/demo-img.png" style="width:100px;">
+                                </a>
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content products">
+                                    <span class="card-title grey-text text-darken-4">T-Mobile + Spotify + Netflix
+                                        <a class="alert-close btn-flat">
+                                            <i class="material-icons right">close</i>
+                                        </a>
+                                    </span>
+                                    <div class="col s6 progress grey lighten-3">
+                                        <div class="determinate  light-green darken-3" style="width: 50%"></div>
+                                    </div>
+                                    <div class="col s3 status">
+                                        <div class=" circle  light-green darken-3">
+                                            <p class="white-text" style="font-size:18pt;">2/4</p>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
-                          </div>
+                            </div>
                         </div>
-                      </div>
-        <div class="card horizontal plans">
-          <div class="card-image">
-            <a href="profile.html"><img src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/16/77/43/16774394-585e-0e4c-c51f-64380162baa8/source/1200x630bb.jpg"
-              style="width:100px;"></a>
-          </div>
-          <div class="card-stacked">
-            <div class="card-content products">
-              <span class="card-title grey-text text-darken-4">Spotify
-                  <a class="alert-close btn-flat"><i class="material-icons right">close</i></a>
-              </span>
-              <div class="col s6 progress grey lighten-3">
-                  <div class="determinate  light-green darken-3" style="width: 75%"></div>
-                </div>
-                <div class="col s3 status">
-                  <div class=" circle  light-green darken-3">
-                    <p class="white-text" style="font-size:18pt;">3/4</p>
-                  </div>
-                </div>
+                        </li>
+                        <li>
+                        <div class="card horizontal plans">
+                            <div class="card-image">
+                                <a href="profile.html">
+                                    <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/16/77/43/16774394-585e-0e4c-c51f-64380162baa8/source/1200x630bb.jpg"
+                                        style="width:100px;">
+                                </a>
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content products">
+                                    <span class="card-title grey-text text-darken-4">Spotify
+                                        <a class="alert-close btn-flat">
+                                            <i class="material-icons right">close</i>
+                                        </a>
+                                    </span>
+                                    <div class="col s6 progress grey lighten-3">
+                                        <div class="determinate  light-green darken-3" style="width: 75%"></div>
+                                    </div>
+                                    <div class="col s3 status">
+                                        <div class=" circle  light-green darken-3">
+                                            <p class="white-text" style="font-size:18pt;">3/4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card horizontal plans">
+                            <div class="card-image">
+                                <a href="profile.html">
+                                    <img src="http://www.userlogos.org/files/netflix-n-logo-png.png" style="width:100px;">
+                                </a>
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content products">
+                                    <span class="card-title grey-text text-darken-4">Netflix
+                                        <a class="alert-close btn-flat">
+                                            <i class="material-icons right">close</i>
+                                        </a>
+                                    </span>
+                                    <div class="col s6 progress grey lighten-3">
+                                        <div class="determinate  light-green darken-3" style="width: 50%"></div>
+                                    </div>
+                                    <div class="col s3 status">
+                                        <div class=" circle  light-green darken-3">
+                                            <p class="white-text" style="font-size:18pt;">2/4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card horizontal plans">
+                            <div class="card-image">
+                                <a href="profile.html">
+                                    <img src="images/bundle.png" style="width:100px;">
+                                </a>
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content products">
+                                    <span class="card-title grey-text text-darken-4">T-Mobile + Hulu + Apple Music
+                                        <a class="alert-close btn-flat">
+                                            <i class="material-icons right">close</i>
+                                        </a>
+                                    </span>
+                                    <div class="col s6 progress grey lighten-3">
+                                        <div class="determinate  light-green darken-3" style="width: 25%"></div>
+                                    </div>
+                                    <div class="col s3 status">
+                                        <div class=" circle  light-green darken-3">
+                                            <p class="white-text" style="font-size:18pt;">1/4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-      </li>
-      <li>
-        <div class="card horizontal plans">
-          <div class="card-image">
-              <a href="profile.html"> <img src="http://www.userlogos.org/files/netflix-n-logo-png.png"
-              style="width:100px;"></a>
-          </div>
-          <div class="card-stacked">
-            <div class="card-content products">
-              <span class="card-title grey-text text-darken-4">Netflix
-                  <a class="alert-close btn-flat"><i class="material-icons right">close</i></a>
-              </span>
-              <div class="col s6 progress grey lighten-3">
-                <div class="determinate  light-green darken-3" style="width: 50%"></div>
-              </div>
-              <div class="col s3 status">
-                <div class=" circle  light-green darken-3">
-                  <p class="white-text" style="font-size:18pt;">2/4</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="card horizontal plans">
-          <div class="card-image">
-              <a href="profile.html"> <img src="images/bundle.png"
-              style="width:100px;"></a>
-          </div>
-          <div class="card-stacked">
-            <div class="card-content products">
-              <span class="card-title grey-text text-darken-4">T-Mobile + Hulu + Apple Music
-                  <a class="alert-close btn-flat"><i class="material-icons right">close</i></a>
-              </span>
-              <div class="col s6 progress grey lighten-3">
-                  <div class="determinate  light-green darken-3" style="width: 25%"></div>
-                </div>
-                <div class="col s3 status">
-                  <div class=" circle  light-green darken-3">
-                    <p class="white-text" style="font-size:18pt;">1/4</p>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </li> 
-      </ul>
-      </div>
     </div>
-  </div>
 
-  <footer class="">
+    <footer class="">
 
-  </footer>
+    </footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/script.js"> </script>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/script.js"> </script>
 
 </body>
 

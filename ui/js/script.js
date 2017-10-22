@@ -1,5 +1,5 @@
 var options = [
-    {selector: '#staggered-test', offset: 400, callback: function(el) {
+    {selector: '#staggered-list', offset: 400, callback: function(el) {
       Materialize.showStaggeredList($(el));
     } }
   ];
