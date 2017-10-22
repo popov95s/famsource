@@ -75,7 +75,7 @@ nav{
   padding: 25px;
   border: 5px solid #eeeeee; 
 }
-.card-content{
+.products{
   padding: 0px 15px !important;
 }
 #logo-container-wide{
@@ -87,4 +87,25 @@ nav{
 }
 .row{
   margin-bottom: 0;
+}
+.infocard{
+  margin-left: 90px !important;
+  margin-top: 20px;
+}
+.services > li{
+  margin-bottom: 40px;
+}
+.services > li:last-child{
+  margin-bottom: 0;
+}
+.addBtn{
+  padding: 0 !important;
+  box-shadow: none !important;
+  background-color: transparent;
+}
+.addBtn:hover{
+  background-color: #eeeeee;
+}
+.tablePlan{
+  padding: 45px;
 }
