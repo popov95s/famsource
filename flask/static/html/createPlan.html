@@ -1,0 +1,143 @@
+<div class="banner">
+        <div class="container-wide">
+            <div class="row" style="margin-bottom:0">
+                <div class="col s12 m4 l3">
+                    <h4>Create A Plan</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-wide" style="padding:0">
+        <div class="row">
+            <div class="col s12 m3 infocard">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title pink-text text-accent-2">Phone Services</span>
+                        <ul class="services">
+                            <li>T-Mobile
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                            <li>Verizon
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3 infocard">
+                <div class="card ">
+                    <div class="card-content">
+                        <span class="card-title purple-text text-darken-4">Video Services</span>
+                        <ul class="services">
+                            <li>Netflix
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                            <li>Hulu
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3 infocard">
+                <div class="card ">
+                    <div class="card-content ">
+                        <span class="card-title light-green-text text-accent-4">Music Services</span>
+                        <ul class="services">
+                            <li>Spotify
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                            <li>Google Play
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                            <li>Apple Music
+                                <a class="btn waves-effect waves-light right addBtn blue-text text-darken-3">
+                                    <i class="tiny material-icons ">add</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row tablePlan">
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Duration</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>T-Mobile</td>
+                        <td>
+                            <div class="col s3">
+                                <input placeholder="Enter Duration" id="duration" type="number" class="validate">
+                            </div>
+                            <div class="input-field col s4 duration">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Years</option>
+                                    <option value="2">Months</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Hulu</td>
+                        <td>
+                            <div class="col s3">
+                                <input placeholder="Enter Duration" id="duration" type="number" class="validate">
+                            </div>
+                            <div class="input-field col s4 duration">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Years</option>
+                                    <option value="2">Months</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="row right submitTable">
+            <a class="waves-effect waves-teal btn-flat modal-trigger" href="#modal1">Add friends</a>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Create Plan
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Add Friends</h4>
+            <input placeholder="Enter Friend's Email" id="duration" type="email" class="validate">
+            <input placeholder="Enter Friend's Email" id="duration" type="email" class="validate">
+            <input placeholder="Enter Friend's Email" id="duration" type="email" class="validate">
+        </div>
+        <div class="modal-footer">
+            <button class="btn waves-effect waves-light" type="submit" name="action" href="#">Create Plan
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
