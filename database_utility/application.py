@@ -58,6 +58,7 @@ class Service(db.Model):
 	service_name = db.Column(db.String(32))
 	service_max_capacity = db.Column(db.Integer)
 	service_min_capacity = db.Column(db.Integer)
+	service_cost = db.Column(db.Float)
 
 	def __unicode__(self):
 		return self.service_name
@@ -84,7 +85,7 @@ class UserReviews(db.Model):
 
 class ServiceAdmin(sqla.ModelView):
 	column_display_pk = True
-	form_columns = ['service_id', 'service_name', 'service_max_capacity','service_min_capacity']
+	form_columns = ['service_id', 'service_name', 'service_max_capacity','service_min_capacity','service_cost']
 
 class ServiceToPlanAdmin(sqla.ModelView):
    	column_display_pk = True
