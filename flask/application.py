@@ -27,7 +27,7 @@ def plans():
     #get all plans
     if request.method == 'GET':
         plans = get_plans()
-        return str(plans) 
+        return json.dumps(plans) 
     
 @app.route('/services', methods=['GET', 'POST'])
 def create_plan():
@@ -36,7 +36,7 @@ def create_plan():
         res = []
         for row in plans:
             res.append({'service_name': row[0], 'service_max_capacity': row[1]})
-        return str(res)
+        return json.dumps(res)
     if request.method =='POST':
         plan_name = request.json['plan_name']
         users = request.json['users']
@@ -61,7 +61,38 @@ def create_plan():
         db.session.commit()
         return Response(status=200)
 
-@app.route('/plans')
+@app.route('/plans/<id>', methods=['GET', 'POST'])
+def plan_details(id):
+    if request.method=='GET':
+        get_details = db.engine.execute("SELECT service_name, service_max_capacity, plan_name, plan_capacity FROM services NATURAL JOIN service_to_plan NATURAL JOIN plans WHERE service_to_plan_plan_id=%s", id)
+        services = []
+        plan_name =""
+        plan_capacity =0
+        for detail in get_details:
+            plan_name=detail['plan_name']
+            plan_capacity=detail['plan_capacity']
+            services.append({'service_name':detail['service_name'],'service_max_capacity':detail['service_max_capacity']})
+        get_users = db.engine.execute("SELECT first_name, review_value FROM users NATURAL JOIN user_to_plan NATURAL JOIN user_reviews WHERE user_to_plan_plan_id=%s", id)
+        users = []        
+        for user in get_users:
+            users.append({'first_name': user['first_name'], 'review_value':user['review_value']})
+        return json.dumps({'services':services, 'users':users, 'plan_capacity':plan_capacity, 'plan_name':plan_name})
+    if request.method=='POST':
+        user_id = request.json['user_id']
+        update_user_subscription = db.engine.execute("INSERT INTO user_to_plan(user_to_plan_user_id, user_to_plan_plan_id) VALUES (%s,%s)", user_id, id)
+        db.session.commit()
+        return Response(status=200)
+
+# @app.route('/<user_id>/plans')
+# def get_all_plans(user_id):
+#     if request.method=='GET':
+#         get_user_plans = db.engine.execute("SELECT plan_name, plan_capacity, plan_id FROM plans NATURAL JOIN user_to_plan WHERE user_id=%s", user_id)
+#         res = []
+#         for plan in get_user_plans:
+#             res.append({'plan_name': plan['plan_name'], 'plan_capacity' :plan['plan_capacity'], 'plan_id': plan['plan_id'], services:[]})
+#         for result in res :
+#             get_services=db.engine.execute("SELECT service_name, service_max_capacity FROM services NATURAL JOIN service_to_plan WHERE plan_id=%s", result['plan_id'])
+
 
 def get_plans():
     get_plans = db.engine.execute("SELECT plan_name, plan_capacity, plan_id FROM plans WHERE plan_public=True")
