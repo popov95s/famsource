@@ -47,7 +47,7 @@ nav{
 .banner{
   color: #fafafa;
   padding-top: 150px;
-  background: linear-gradient(50deg, HSLA(205, 62%, 44%, 1), #F62D51);
+  background: linear-gradient(to right, #c21500, #ffc500);
   width: 100%;
 }
 .brand-logo{
@@ -108,4 +108,18 @@ nav{
 }
 .tablePlan{
   padding: 45px;
+}
+.duration{
+  margin-top: 0;
+}
+.submitTable{
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.profile{
+  margin-top: 20px;
+  padding: 5px;
+}
+i.star{
+  color:#ffc400;
 }
